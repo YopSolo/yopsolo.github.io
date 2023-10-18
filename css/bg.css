@@ -59,7 +59,7 @@ body {
   animation-timing-function: linear;
 }
 body::before {
-  content: "Rendus";
+  content: "Lisaa 23/24";
   font-size: 4rem;
   font-weight: 100;
   font-style: normal;
