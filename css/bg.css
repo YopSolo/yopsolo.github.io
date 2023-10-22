@@ -70,6 +70,5 @@ body {
 body::before {
   content: "Lisaa 23/24";
   font-size: 4rem;
-  font-weight: 100;
   font-style: normal;
 }
