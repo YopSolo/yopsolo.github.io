@@ -1,7 +1,7 @@
 .tabs {
     display: flex;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, .66);
+    background: rgba(255, 255, 255, .5);
 }
 
 .tabInput {
@@ -19,11 +19,11 @@
 }
 
 .tabLabel:hover {
-    background: rgba(216, 216, 216, .66);
+    background: hsl(204, 100%, 90%);
 }
 
 .tabLabel:active {
-    background: #fff;
+    background: hsl(204, 100%, 95%);
 }
 
 .tabInput:focus+.tabLabel {
@@ -31,13 +31,12 @@
 }
 
 .tabInput:checked+.tabLabel {
-    background: #09f;
+    background: hsl(204, 100%, 50%);
     color: #eee;
 }
 
 .tabPanel {
     display: none;
-    background: rgba(255, 255, 255, .1);
     order: 99;
 }
 
