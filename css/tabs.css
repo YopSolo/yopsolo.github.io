@@ -1,8 +1,7 @@
 .tabs {
     display: flex;
     flex-wrap: wrap;
-    background: #e5e5e5;
-    box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, .66);
 }
 
 .tabInput {
@@ -14,18 +13,17 @@
     width: auto;
     margin: 0;
     padding: 20px 30px;
-    background: #e5e5e5;
-    cursor: pointer;
-    color: #7f7f7f;
+    background: rgba(255, 255, 255, .66);
+    color: #000;
     transition: background 0.1s, color 0.1s;
 }
 
 .tabLabel:hover {
-    background: #d8d8d8;
+    background: rgba(216, 216, 216, .66);
 }
 
 .tabLabel:active {
-    background: #ccc;
+    background: #fff;
 }
 
 .tabInput:focus+.tabLabel {
@@ -39,7 +37,7 @@
 
 .tabPanel {
     display: none;
-    background: #fff;
+    background: rgba(255, 255, 255, .1);
     order: 99;
 }
 
