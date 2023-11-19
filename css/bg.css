@@ -68,7 +68,7 @@ body {
 }
 
 body::before {
-  content: "Lisaa 23/24";
+  content: "Plan de cours";
   font-size: 4rem;
   font-style: normal;
 }
