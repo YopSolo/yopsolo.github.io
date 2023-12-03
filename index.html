@@ -52,7 +52,7 @@
                             <li>Raycast & Capsule cast</li>
                             <li>Character Controller</li>
                             <li>Animator & Animation | Ref <a href="https://youtu.be/b3fQgXm3M8U"
-                                class="nes-icon youtube is-small"></a></li>
+                                    class="nes-icon youtube is-small"></a></li>
                             <li>Build for windows</li>
                             <li>SceneManager</li>
                             <li>Prefabs</li>
@@ -75,8 +75,8 @@
                             <li>Git flow (merge)</li>
                             <li>Levels & sublevels</li>
                             <li>Take recorder</li>
-                            <li>UMG - layout</li>
-                            <li>UMG - animation | Ref <a href="https://youtu.be/zUCO9faa-I8?si=WnT1HXrOEEfNpcNL"
+                            <li>UMG - Layout</li>
+                            <li>UMG - Animation | Ref <a href="https://youtu.be/zUCO9faa-I8?si=WnT1HXrOEEfNpcNL"
                                     class="nes-icon youtube is-small"></a></li>
                             <li>[x] UMG - Binding & data event</li>
                             <li>[x] Raycast</li>
@@ -110,7 +110,7 @@
                             <li>&nbsp;&nbsp;Blendspace 1D et 2D</li>
                             <li>&nbsp;&nbsp;Locomotion analysis</li>
                             <li>&nbsp;&nbsp;Additive animation</li>
-                            <li>&nbsp;&nbsp;Sockets</li>
+                            <li>&nbsp;&nbsp;Sockets (skeleton)</li>
                             <li>&nbsp;&nbsp;Animation montage - slots & anim notify</li>
                             <li>&nbsp;&nbsp;Blend per bone</li>
                             <li>&nbsp;&nbsp;Intro to physical animation</li>
@@ -220,5 +220,33 @@
 
     </div>
 </body>
+<script>
+    const pageAlias = {
+        'gd1': '1',
+        'gd2': '2',
+        'gd3': '3',
+        'ta3': '4',
+        'module3': '5'
+    };
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    // higlight current tab
+    if (urlParams.has('page')) {
+        let page = urlParams.get('page').toLowerCase();
+        if (page !== 'gd1') {
+            document.getElementById('tab-' + pageAlias[page]).checked = true;
+        }
+    }
+
+    // update url on tab click
+    const tabInputs = document.getElementsByClassName('tabInput');
+    for (let i = 0; i < tabInputs.length; i++) {
+        tabInputs[i].addEventListener('click', function () {
+            let page = this.id.split('-')[1];
+            let pageKey = Object.keys(pageAlias).find(key => pageAlias[key] === page);
+            window.history.pushState({}, '', 'index.html?page=' + pageKey);
+        });
+    }
+</script>
 
 </html>
