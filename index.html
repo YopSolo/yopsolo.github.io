@@ -223,11 +223,15 @@
                             <li>Sockets (SOCKET_?*_##)</li>
                             <li><a href="data/exo-janv-TA3-01-MoveSet.pdf">Exo Jan : MoveSet</a> <a
                                 href="https://www.youtube.com/watch?v=HswCxSUoWfo"
-                                class="nes-icon youtube is-small"></a></li>
-                            <li>[x]Profiling 1</li>
-                            <li>[x]Opti - Texture</li>
-                            <li>[x]Tooling - construct script</li>
-                            <!-- <li>[x]Opti - Mesh</li>
+                                class="nes-icon youtube is-small"></a></li>                            
+                            <li>Tooling</li>
+                            <li>&nbsp;&nbsp;[x]Construct script</li>
+                            <!-- <li>&nbsp;&nbsp;[x]Bluetilities</li>-->
+                            <!-- <li>&nbsp;&nbsp;[x]PCG</li>-->
+                                <li>Optimisation</li>
+                            <li>&nbsp;&nbsp;[x]Textures</li>                            
+                            <!-- <li>&nbsp;&nbsp;Meshes</li> -->
+                            <!--
                             <li>[x]Opti - LOD</li>
                             <li>[x]Opti - Culling</li>
                             <li>[x]Opti - Occlusion</li>
@@ -237,17 +241,30 @@
                             <li>[x]Opti - Blueprint</li>
                             <li>[x]Opti - Profiling</li>
                             <li>[x]Opti - Async</li>
-                            <li>[x]Opti - GC</li> -->
-                            <!-- <li>Construct script</li> -->
-                            <!-- <li>Blutilities</li> -->
-                            <!-- <li>PCG</li> -->
+                            <li>[x]Opti - GC</li>
+                            -->
                         </ul>
                     </div>
                 </div>
             </div>
 
             <input class="tabInput" name="tabs" type="radio" id="tab-5" />
-            <label class=tabLabel for="tab-5">Module GP</label>
+            <label class=tabLabel for="tab-5">Module GP2</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Contenu Module GP</p>
+                    <div class="lists" style="text-align: left">
+                        <ul class="nes-list is-disc">
+                            <li>Intro to <a
+                                href="https://dev.epicgames.com/community/learning/tutorials/pPWY/unreal-engine-intuitive-material-building-with-the-ui-material-lab-part-2"
+                                target="_self">Material UI</a> </li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <input class="tabInput" name="tabs" type="radio" id="tab-6" />
+            <label class=tabLabel for="tab-6">Module GP3</label>
             <div class="tabPanel" style="width: 100%;">
                 <div class="nes-container with-title">
                     <p class="title">Contenu Module GP</p>
@@ -272,7 +289,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
 
         <div class="nes-container with-title" style="background: rgba(255, 255, 255, .5);">
             <p class=" title">Ressources Unity</p>
@@ -376,7 +393,8 @@
         'gd2': '2',
         'gd3': '3',
         'ta3': '4',
-        'module3': '5'
+        'module3': '5',
+        'module2': '6'
     };
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
