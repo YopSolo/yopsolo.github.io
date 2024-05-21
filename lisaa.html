@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link href="css/bg.css" rel="stylesheet" />
+    <link href="css/tabs.css" rel="stylesheet" />
+
+    <style>
+        html,
+        body,
+        pre,
+        code,
+        kbd,
+        samp {
+            font-family: "Press Start 2P";
+        }
+
+        body {
+            margin: 2rem;
+        }
+
+        .nes-container {
+            margin: 1rem;
+        }
+
+        .special {
+            color: #AB9A44;
+        }
+
+        .nes-progress {
+            margin: 1rem;
+            border-image-repeat: repeat;
+        }
+    </style>
+</head>
+
+<body style="width: 70%;margin: auto;">
+    <div style="position: absolute; top: 10px; right: 20px; display: flex; align-items:normal;">
+        <a href="https://github.com/YopSolo?tab=repositories&q=&type=public&language=&sort=" target="_self" class="nes-myOctocat"></a>
+    </div>
+
+        <div>
+            <p class=".tabLabel" style="font-size: 2rem;" onclick="window.location='index.html'" title="Return to home menu ↩️" onmouseover="">Plan de cours <br /> Intervenant Lisaa</p>
+        </div>
+
+        <div class="tabs">
+            <input class="tabInput" name="tabs" type="radio" id="tab-1" checked="checked" />
+            <label class=tabLabel for="tab-1">GD1</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Contenu GD1</p>
+                    <div class="lists" style="text-align: left">
+                        <ul class="nes-list is-disc">
+                            <li>Unity terminology</li>
+                            <li><span class="special">[Algo]</span> Data (variables, Enum, Scriptable Objects)</li>
+                            <li><span class="special">[Algo]</span> cycle de vie d'une variable</li>
+                            <li><span class="special">[Git]</span> fetch a repository</li>
+                            <li>Assets import (textures, meshes)</li>
+                            <li><span class="special">[Algo]</span> Conditions</li>
+                            <li>Start / Awake</li>
+                            <li>Update / FixedUpdate / DeltaTime</li>
+                            <li>Input handling (legacy)</li>
+                            <li>Colliders & Triggers</li>
+                            <li>Enabling / Disabling components</li>
+                            <li>Enabling / Disabling gameObjects</li>
+                            <li>[x] Transform.LookAt</li>
+                            <li>Cinemachine (virtual camera)</li>
+                            <li>Raycast & CapsuleCast</li>
+                            <li>[x]Raycast & layerMask</li>
+                            <li>Character Controller (simpleMove)</li>
+                            <li>Animator & Animation | Ref <a href="https://youtu.be/b3fQgXm3M8U"
+                                    class="nes-icon youtube is-small" title="Animator & Animation"></a></li>
+                            <li>[x] Lerp</li>
+                            <li>Build for windows</li>
+                            <li>SceneManager</li>
+                            <li>Prefabs</li>
+                            <li>Tag</li>
+                            <li>Character Controller (Move)</li>
+                            <li><span class="special">[Algo]</span> Loops - For</li>
+                            <li><span class="special">[Algo]</span> Loops - ForEach</li>
+                            <li>[x] <span class="special">[Algo]</span> Loops - While</li>
+                            <li>Instantiate</li>
+                            <li><span class="special">[Algo]</span> Data Structure (List)</li>
+                            <li><span class="special">[Algo]</span> Data Structure (Array)</li>
+                            <li><span class="special">[Algo]</span> Data Structure (Dictionary)</li>
+                            <li><span class="special">[Git]</span> push</li>
+                            <li><span class="special">[Git]</span> branch/merge</li>
+                            <li>Intro to UI (canvas, layout, text, button)</li>
+                            <li><a href="https://learn.unity.com/project/visual-scripting-application-clive-the-cat-s-visual-crypting">Clive The Cat</a></li>
+                            <li>Subgraph</li>
+                            <li>Custom Event</li>
+                            <li>List Interface (contains, add, remove)</li>
+                            <li>[Exo] SoundManager</li>
+                            <li>Don't destroy onload</li>
+                            <li>[Exo] Starfield</li>
+                            <li>Intro to Shader Graph</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <input class="tabInput" name="tabs" type="radio" id="tab-2" />
+            <label class=tabLabel for="tab-2">GD2</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Contenu GD2</p>
+                    <div class="lists" style="text-align: left">
+                        <ul class="nes-list is-disc">
+                            <li>Unreal terminology => <a
+                                    href="https://docs.unrealengine.com/5.2/en-US/gameplay-framework-in-unreal-engine/">Gameplay
+                                    framework</a></li>
+                            <li>Enhanced Input</li>
+                            <li>Build with 'Project launcher'</li>
+                            <li><span class="special">[Git]</span> branching flow (merge)</li>
+                            <li>Levels & sublevels</li>
+                            <li>Take recorder</li>
+                            <li>[x]Sequencer</li>
+                            <li>UMG - Layout</li>
+                            <li>UMG - Animation | Ref <a href="https://youtu.be/zUCO9faa-I8?si=WnT1HXrOEEfNpcNL"
+                                    class="nes-icon youtube is-small" title="UMG - Animation"></a></li>
+                            <li>UMG - Binding & Data Event</li>
+                            <li>Raycast</li>
+                            <li>TimeLine</li>
+                            <li>Physic constraints</li>
+                            <br>
+                            Sound
+                            <li>&nbsp;&nbsp;SoundMixer</li>
+                            <li>&nbsp;&nbsp;SoundClass</li>
+                            <li>&nbsp;&nbsp;Sound Concurrency</li>
+                            <li>&nbsp;&nbsp;Sound Attenuation</li>
+                            <li>&nbsp;&nbsp;UI sound</li>
+                            <li>&nbsp;&nbsp;Create/Spawn Sound/2D/Location</li>
+                            <li>&nbsp;&nbsp;Attach sound</li>
+                            <li>&nbsp;&nbsp;Audio components</li>
+                            <li>&nbsp;&nbsp;Sound oculusion (attenuation settings)</li>
+                            <li>&nbsp;&nbsp;Audio Volumes (sound class, apply ambiant volume)</li>
+                            <li>&nbsp;&nbsp;Exo Sonorisation : Watermill</li>
+                            <li>&nbsp;&nbsp;BaseSoundMixer & UI</li>
+                            <li>&nbsp;&nbsp;Spline component & Sound Spline</li>
+                            <li>Data Table - BallisticFX</li>
+                            <br>
+                            Animation blueprint
+                            <li>&nbsp;&nbsp;Event graph</li>
+                            <li>&nbsp;&nbsp;Anim graph</li>
+                            <li>&nbsp;&nbsp;State machine</li>
+                            <li>&nbsp;&nbsp;Transitions & priority order</li>
+                            <li>&nbsp;&nbsp;Debug anim graph & slomo</li>
+                            <li>&nbsp;&nbsp;Cache pose</li>
+                            <li>&nbsp;&nbsp;UE4->UE5 retarget</li>
+                            <li>&nbsp;&nbsp;Blendspace</li>
+                            <li>&nbsp;&nbsp;Locomotion analysis</li>
+                            <li>&nbsp;&nbsp;[x]Additive animation</li>
+                            <li>&nbsp;&nbsp;Blend pose by bool</li>
+                            <li>&nbsp;&nbsp;Animation Montage</li>
+                            <li>&nbsp;&nbsp;Physic asset</li>
+                            <br>
+                            <li>Intro to Chaos Destruction | Ref <a href="https://youtu.be/7nF3OcKyWeQ" class="nes-icon youtube is-small" title="Intro to Chaos Destruction"></a></li>
+                            <li>[x]Intro to Paper2D</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <input class="tabInput" name="tabs" type="radio" id="tab-3" />
+            <label class=tabLabel for="tab-3">GD3</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Contenu GD3</p>
+                    <div class="lists" style="text-align: left">
+                        <ul class="nes-list is-disc">
+                            <li>Enhanced Input <a href="https://youtu.be/uU3qE6usbUI?si=Wjck1ma9wWtC2u_X"
+                                    class="nes-icon youtube is-small" title="Enhanced input"></a></li>
+                            <li>Level streaming & sub level<a href="https://youtu.be/lRvfwrBtyUg?si=NGYF8xb9mow7o71C"
+                                    class="nes-icon youtube is-small" title="Level streaming"></a></li>
+                            <li>Intro to World partition</li>
+                            <br>
+                            Animation blueprint <a href="https://youtu.be/ULnQsBQ0H9g?si=t7gQ9-OCueoOQvT3"
+                                    class="nes-icon youtube is-small" title="Animation Blueprint"></a>
+                            <li>&nbsp;&nbsp;Event graph</li>
+                            <li>&nbsp;&nbsp;Anim graph</li>
+                            <li>&nbsp;&nbsp;State machine</li>
+                            <li>&nbsp;&nbsp;Transitions & priority order</li>
+                            <li>&nbsp;&nbsp;Debug anim graph & slomo</li>
+                            <li>&nbsp;&nbsp;Cache pose</li>
+                            <li>&nbsp;&nbsp;UE4->UE5 retarget</li>
+                            <li>&nbsp;&nbsp;Blendspace 1D et 2D</li>
+                            <li>&nbsp;&nbsp;Locomotion analysis</li>
+                            <li>&nbsp;&nbsp;Additive animation</li>
+                            <li>&nbsp;&nbsp;Sockets (skeleton)</li>
+                            <li>&nbsp;&nbsp;Animation montage - slots & anim notify</li>
+                            <li>&nbsp;&nbsp;Blend per bone</li>
+                            <li>&nbsp;&nbsp;Physical asset</li>
+                            <li>&nbsp;&nbsp;<a href="data/exo-nov-a-big-door.pdf">Exo nov : A big door</a> <a
+                                    href="https://youtu.be/AwVnX0c7Kns?si=NV1VBakL1Ry5GVNr"
+                                    class="nes-icon youtube is-small" title="A big door"></a></li>
+                            <li>&nbsp;&nbsp;Animation montage - Section</li>
+                            <li>&nbsp;&nbsp;Animation montage - Root motion</li>
+                            <li>&nbsp;&nbsp;Intro to Control Rig</li>
+                            <br>
+                            <li>Custom collisions (UCX_?*_##)</li>
+                            <li>Sockets (SOCKET_?*_##)</li>
+                            <!-- <li>[x]Localisation</li> -->
+                            <li>GameUser settings</li>
+                            <li>Hardware benchmark</li>
+                            <li>Saving/Loading</li>
+                            <li>Engine scalability settings</li>
+                            <li>[x]Blueprint components</li>
+                            <li>Editor Utilities aka "Blutilities"</li>
+                            <li>&nbsp;&nbsp;Editor Action</li>
+                            <li>&nbsp;&nbsp;Editor Asset</li>
+                            <li>&nbsp;&nbsp;Editor Widget utilities</li>
+                            <li><a href="data/Exo-GD3-02-MayTheLight.pdf" title="May The light">Exo Fev : May The light
+                                    !</a>
+                            <li>Spline component</li>
+                            <li>&nbsp;&nbsp;Editor</li>
+                            <li>&nbsp;&nbsp;Runtime</li>
+                            <li>&nbsp;&nbsp;Spline mesh component</li>
+                            <li>Construct script</li>
+                            <li>Intro to PCG</li>
+                            <li>IA</li>
+                            <li>&nbsp;&nbsp;IA Controller</li>
+                            <li>&nbsp;&nbsp;Pawn sensing (distraction mechanic)</li>
+                            <li>&nbsp;&nbsp;Behavior trees</li>
+                            <li>Intro to C++</li>
+                            <li>Intro to Multiplayer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <input class="tabInput" name="tabs" type="radio" id="tab-4" />
+            <label class=tabLabel for="tab-4">TA3</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Contenu TA3</p>
+                    <div class="lists" style="text-align: left">
+                        <ul class="nes-list is-disc">
+                            <li>Exemple de flow de production</li>
+                            <li><span class="special">[Git]</span> branching flow (merge)</li>
+                            <li>Sequencer</li>
+                            <li>Take Recorder</li>
+                            <br>
+                            Animation blueprint
+                            <li>&nbsp;&nbsp;Event graph</li>
+                            <li>&nbsp;&nbsp;Anim graph</li>
+                            <li>&nbsp;&nbsp;State machine</li>
+                            <li>&nbsp;&nbsp;Transitions & priority order</li>
+                            <li>&nbsp;&nbsp;Debug anim graph & slomo</li>
+                            <li>&nbsp;&nbsp;Cache pose</li>
+                            <li>&nbsp;&nbsp;UE4->UE5 retarget</li>
+                            <li>&nbsp;&nbsp;Blendspace</li>
+                            <li>&nbsp;&nbsp;Locomotion analysis</li>
+                            <li>&nbsp;&nbsp;Additive animation</li>
+                            <li>&nbsp;&nbsp;Blend pose by bool</li>
+                            <li>&nbsp;&nbsp;Layered Blend per bone</li>
+                            <li>&nbsp;&nbsp;Skeleton Socket</li>
+                            <li>&nbsp;&nbsp;Physical asset</li>
+                            <li>&nbsp;&nbsp;Animation montage - Section</li>
+                            <li>&nbsp;&nbsp;Animation montage - Root motion</li>
+                            <li>&nbsp;&nbsp;Intro to Control Rig</li>
+                            <li>Physic constraints actor/component</li>
+                            <li>Custom collisions (UCX_?*_##)</li>
+                            <li>Sockets (SOCKET_?*_##)</li>
+                            <li><a href="data/exo-janv-TA3-01-MoveSet.pdf">Exo Jan : MoveSet</a> <a
+                                    href="https://www.youtube.com/watch?v=HswCxSUoWfo" class="nes-icon youtube is-small"
+                                    title="Exo - MoveSet"></a></li>
+                            <br>
+                            Tooling
+                            <li>&nbsp;&nbsp;[x]Asset validator</li>
+                            <li>&nbsp;&nbsp;Asset editor utility</li>
+                            <li>&nbsp;&nbsp;Actor editor utility</li>
+                            <li>&nbsp;&nbsp;[x]Construct script</li>
+                            <li>&nbsp;&nbsp;Intro to PCG</li>
+                            <li>&nbsp;&nbsp;Commands</li>
+                            <li>&nbsp;&nbsp;ShowFlags</li>
+
+                            <br>
+                            Optimisation
+                            <li>&nbsp;&nbsp;Textures (pow2, lod bias, srgb, alpha chanel, groups)</li>
+                            <li>&nbsp;&nbsp;Static meshes (lod, collisions, merge actor, draw call)</li>
+                            <li>&nbsp;&nbsp;Master material & material instance</li>
+                            <li>&nbsp;&nbsp;Lighting (lightmap, lightmass, GPU lightmass, lightmap density)</li>
+                            <li>&nbsp;&nbsp;Lumen</li>
+                            <li>&nbsp;&nbsp;Nanite</li>
+                            <li>&nbsp;&nbsp;[x]Landscape</li>
+                            <li>&nbsp;&nbsp;[x]Foliage</li>
+                            <li>&nbsp;&nbsp;[x]Niagara</li>
+
+                            <br>
+                            Profiling
+                            <li>&nbsp;&nbsp;Size map</li>
+                            <li>&nbsp;&nbsp;Reference viewer</li>
+                            <li>&nbsp;&nbsp;Find actor using this asset</li>
+                            <li>&nbsp;&nbsp;<a
+                                    href="https://docs.unrealengine.com/5.2/en-US/viewport-modes-in-unreal-engine/">Optimisation
+                                    view mode</a></li>
+                            <li>&nbsp;&nbsp;VSync & editorVSync</li>
+                            <li>&nbsp;&nbsp;[x]Tools > audit statistics</li>
+
+                            <br>
+                            Config
+                            <li>&nbsp;&nbsp;DefaultEngine.ini</li>
+                            <li>&nbsp;&nbsp;[x][engine]BaseDeviceProfiles.ini</li>
+                            <li>&nbsp;&nbsp;[x][engine]BaseScalability.ini</li>
+                            <li>&nbsp;&nbsp;<a
+                                    href="https://docs.unrealengine.com/5.2/en-US/forward-shading-renderer-in-unreal-engine/">Forward
+                                    vs Deferred rendering</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <input class="tabInput" name="tabs" type="radio" id="tab-5" />
+            <label class=tabLabel for="tab-5">Module GP2</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Contenu Module GP</p>
+                    <div class="lists" style="text-align: left">
+                        <ul class="nes-list is-disc">
+                            <li>Intro to <a
+                                    href="https://dev.epicgames.com/community/learning/tutorials/pPWY/unreal-engine-intuitive-material-building-with-the-ui-material-lab-part-2"
+                                    target="_self">Material UI</a> </li>
+                            <li>Debug (Breakpoint, BP debugger & Visual Logger)</li>
+                            <li><span class="special">[Algo]</span> Singleton pattern</li>
+                            <li><span class="special">[Algo]</span> Observer pattern</li>
+                            <li><span class="special">[Algo]</span> Command pattern</li>
+                            <li>Interface</li>
+                            <li>Construct Script, Spline & spline meshe</li>
+                            <li>Gameplay Tags</li>
+                            <li>Intro to C++</li>
+                            <li>Intro to Multiplayer</li>
+                            <li>[x]PCG (module)</li>
+                            <li>[x]<span class="special">[Algo]</span> Pooling (module)</li>
+                            <li>[x]Crystal Sound</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <input class="tabInput" name="tabs" type="radio" id="tab-6" />
+            <label class=tabLabel for="tab-6">Module GP3</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Contenu Module GP</p>
+                    <div class="lists" style="text-align: left">
+                        <ul class="nes-list is-disc">
+                            <li><span class="special">[Algo]</span> Singleton pattern</li>
+                            <li><span class="special">[Algo]</span> Observer pattern</li>
+                            <li><span class="special">[Algo]</span> Command pattern</li>
+                            <li><span class="special">[Algo]</span> Object pooling</li>
+                            <li>HTTP Request & JSON parsing</li>
+                            <li>PCG - Seeded random</li>
+                            <li>PCG - Construct script</li>
+                            <li>PCG - Instantiated static mesh</li>
+                            <li>PCG - Level generation (WFC)</li>
+                            <li>PrimaryDataAssets & DataAsset</li>
+                            <li>Intro to <a
+                                    href="https://dev.epicgames.com/community/learning/tutorials/pPWY/unreal-engine-intuitive-material-building-with-the-ui-material-lab-part-2"
+                                    target="_self">Material UI</a> </li>
+                            <li>Debug (Breakpoint,BP debugger & Visual Logger)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nes-container with-title" style="background: rgba(255, 255, 255, .5);">
+            <p class=" title">Ressources Unity</p>
+            <div class="lists" style="text-align: left">
+                <ul class="nes-list is-disc">
+                    <li><a href="https://unity.com/how-to/naming-and-code-style-tips-c-scripting-unity" target="_self"
+                            title="Unity C# naming convention">Unity C# naming convention</a></li>
+                    <li><a href="https://docs.unity3d.com/Manual/ExecutionOrder.html">Documentation : Execution
+                            Order</a></li>
+                    <li><a href="https://learn.unity.com/" title="Unity Learn">Unity Learn</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCLyVUwlB_Hahir_VsKkGPIA">Mix & Jam</a> <a
+                            href="https://www.youtube.com/channel/UCLyVUwlB_Hahir_VsKkGPIA"
+                            class="nes-icon youtube is-small" title="Mix & Jam"></a></li>
+                    <li><a href="https://learn.unity.com/project/visual-scripting-application-clive-the-cat-s-visual-crypting">Clive the cat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nes-container with-title" style="background: rgba(255, 255, 255, .5);">
+            <p class=" title">Ressources Unreal</p>
+            <div class="lists" style="text-align: left">
+                <ul class="nes-list is-disc">
+                    <li><a href="https://github.com/Allar/ue5-style-guide#1-asset-naming-conventions" target="_self">UE5
+                            BP naming convention</a></li>
+                    <li><a href="https://github.com/Allar/ue5-style-guide#2e1-example-project-content-structure"
+                            target="_self">UE5 Example project structure</a></li>
+                    <li><a href="https://docs.unrealengine.com/5.2/en-US/fbx-static-mesh-pipeline-in-unreal-engine/">FBX
+                            Static Mesh Pipeline</a></li>
+                    <li><a href="https://dev.epicgames.com/community/unreal-engine/learning?industries=games&types=tutorial,talks_and_demos,livestream&categories=programming-and-scripting&is_beginner=true&applications=5_unreal_engine"
+                            target="_self">Dev.epicgames.com</a></li>
+                    <li><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/procedural-content-generation-framework-node-reference-in-unreal-engine">PGC Node Reference</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCBobmJyzsJ6Ll7UbfhI4iwQ">Unreal Engine</a> <a
+                            href="https://www.youtube.com/channel/UCBobmJyzsJ6Ll7UbfhI4iwQ"
+                            class="nes-icon youtube is-small" title="Unreal Engine"></a></li>
+                    <li><a href="https://www.youtube.com/@RyanLaley">Ryan Laley</a> <a
+                            href="https://www.youtube.com/@RyanLaley" class="nes-icon youtube is-small"
+                            title="Ryan Laley"></a></li>
+                    <li><a href="https://www.tomlooman.com/unreal-engine-gameplay-framework/">Gameplay framework C++</a></li>
+                    <li><a href="https://cedric-neukirchen.net/docs/category/multiplayer-network-compendium/">Multiplayer compendium</a></li>                    
+                </ul>
+            </div>
+        </div>
+
+        <!--
+        <div class="nes-container with-title" style="background: rgba(255, 255, 255, .5);">
+            <p class="title">Rendus semestre 2</p>
+            <section class="message-list">
+                <section class="message -right" style="text-align: right; margin-right: 10%; opacity: .33;">
+                    <div class="nes-balloon from-right">
+                        GD1, <a href="ressources/OneButtonGame.pdf">One Button Game</a> - 28/03/2024.
+                    </div>
+                </section>
+
+                <section class="message -left" style="text-align: left;margin-left: 10%; opacity: .33;">
+                    <div class="nes-balloon from-left nes-pointer">
+                        GD2, <a href="ressources/Brief-FixDatGame.pdf">Fix dat game :D </a>- 14/03/2024.
+                    </div>
+                </section>
+            </section>
+        </div>
+
+        <div class="nes-container with-title" style="background: rgba(255, 255, 255, .5);">
+            <p class="title">Rendus semestre 1</p>
+            <section class="message-list">
+                <section class="message -left" style="text-align: left;margin-left: 10%; opacity: .33;">
+                    <div class="nes-balloon from-left nes-pointer">
+                        TA3 <a href="ressources/couloir-format-de-rendu.zip">Couloir 10H</a> - 27/10/2023.
+                    </div>
+                </section>
+
+                <section class="message -right" style="text-align: right; margin-right: 10%; opacity: .33;">
+                    <div class="nes-balloon from-right">
+                        GD1 <a href="ressources/Resident-Evil.pdf">Resident Evil Like</a> - 22/12/2023.
+                    </div>
+                </section>
+
+                <section class="message -left" style="text-align: left;margin-left: 10%; opacity: .33;">
+                    <div class="nes-balloon from-left nes-pointer">
+                        GD2 <a href="ressources/Overwatch Arena.pdf">Overwatch Arena</a> - 22/12/2023.
+                    </div>
+                </section>
+
+                <section class="message -right" style="text-align: right; margin-right: 10%; opacity: .33;">
+                    <div class="nes-balloon from-right">
+                        GD3 <a href="ressources/SeaOfLove.zip">Sea of love</a> - 22/12/2023.
+                    </div>
+                </section>
+            </section>
+        </div>
+        -->
+
+    </div>
+</body>
+<script>
+    const pageAlias = {
+        'gd1': '1',
+        'gd2': '2',
+        'gd3': '3',
+        'ta3': '4',
+        'module2': '5',
+        'module3': '6'
+    };
+    const queryString = window.location.search;    
+
+
+
+    const urlParams = new URLSearchParams(queryString);
+    // higlight current tab
+    if (urlParams.has('page')) {
+        let page = urlParams.get('page').toLowerCase();
+        if (page !== 'gd1') {
+            document.getElementById('tab-' + pageAlias[page]).checked = true;
+        }
+    }
+
+    // update url on tab click
+    const tabInputs = document.getElementsByClassName('tabInput');
+    for (let i = 0; i < tabInputs.length; i++) {
+        tabInputs[i].addEventListener('click', function () {
+            let page = this.id.split('-')[1];
+            let pageKey = Object.keys(pageAlias).find(key => pageAlias[key] === page);
+            window.history.pushState({}, '', window.location.pathname+'?page=' + pageKey);
+        });
+    }
+</script>
+
+</html>
