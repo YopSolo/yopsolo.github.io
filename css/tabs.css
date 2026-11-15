@@ -15,11 +15,20 @@
     padding: 20px 30px;
     background: rgba(255, 255, 255, .66);
     color: #000;
-    transition: background 0.1s, color 0.1s;
+    transition: background 0.1s, color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+.tabLabel:not(:last-of-type) {
+    margin-right: 12px;
 }
 
 .tabLabel:hover {
-    background: hsl(204, 100%, 90%);
+    position: relative;
+    z-index: 1;
+    background: #00AAFF;
+    color: #fff;
+    box-shadow: 4px 4px 0 #111;
+    transform: translate(-2px, -2px);
 }
 
 .tabLabel:active {
@@ -42,4 +51,35 @@
 
 .tabInput:checked+.tabLabel+.tabPanel {
     display: block;
+}
+
+/* Mots-clés de la présentation : accent doré cohérent avec le thème NES. */
+.keyword {
+    color: #D97706;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 rgba(217, 119, 6, .18);
+    white-space: nowrap;
+}
+
+/* Liens de contenu : un hover plus franc, dans l'esprit pixel art. */
+#nescss .tabPanel a {
+    display: inline-block;
+    color: #0077B6;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    transition: background 0.1s, color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+#nescss .tabPanel a:hover,
+#nescss .tabPanel a:focus-visible {
+    position: relative;
+    z-index: 1;
+    padding: 2px 4px;
+    margin: -2px -4px;
+    color: #fff;
+    background: #00AAFF;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #111;
+    transform: translate(-2px, -2px);
 }

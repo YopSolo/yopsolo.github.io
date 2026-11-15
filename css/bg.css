@@ -68,9 +68,14 @@ body {
 }
 
 .mainTitle {
-  font-size: 2rem;
-  margin-top: 1rem;
-  color: #333;
+  position: relative;
+  display: inline-block;
+  margin: 1.5rem 0 2rem;
+  padding: 0 .25rem;
+  color: #111;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  letter-spacing: .04em;
+  text-shadow: 4px 4px 0 #C7C7C7;
 }
 
 .nes-myOctocat {
