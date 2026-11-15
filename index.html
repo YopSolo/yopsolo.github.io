@@ -126,6 +126,11 @@
 </body>
 <script>
     const pageAlias = {
+        'about': '1',
+        'prototypes': '2',
+        'lisaa': '3'
+    };
+    const legacyPageAlias = {
         'tab_recents': '1',
         'tab_historique': '2',
         'tab_lisaa': '3'
@@ -137,7 +142,8 @@
     if (urlParams.has('page')) {
         let page = urlParams.get('page').toLowerCase();
         if (page !== 'gd1') {
-            document.getElementById('tab-' + pageAlias[page]).checked = true;
+            const pageNumber = pageAlias[page] || legacyPageAlias[page];
+            if (pageNumber) document.getElementById('tab-' + pageNumber).checked = true;
         }
     }
 
