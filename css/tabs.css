@@ -104,6 +104,8 @@
     display: block;
     flex: 1 1 0;
     min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 0;
     border: 0;
     background: transparent;
@@ -120,7 +122,9 @@
 .deck-gallery img {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
+    box-sizing: border-box;
     border: 8px solid #fff;
     box-shadow: 6px 6px 0 rgba(17, 17, 17, .85);
 }
