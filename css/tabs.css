@@ -116,17 +116,25 @@
     }
 }
 
-/* Onglets compacts sur mobile : 3 onglets sur une seule ligne. */
+/* Onglets sur mobile : toujours 3 colonnes sur une seule ligne, panneau dessous. */
 @media (max-width: 700px) {
-    .tabLabel {
-        flex: 1 1 auto;
-        padding: 14px 6px;
-        font-size: .6rem;
-        text-align: center;
+    .tabs {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 4px;
     }
 
+    .tabPanel {
+        grid-column: 1 / -1;
+    }
+
+    .tabLabel,
     .tabLabel:not(:last-of-type) {
-        margin-right: 4px;
+        margin: 0;
+        padding: 14px 2px;
+        font-size: clamp(.5rem, 2.6vw, .6rem);
+        text-align: center;
+        white-space: nowrap;
     }
 }
 
