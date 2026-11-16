@@ -22,13 +22,15 @@
     margin-right: 12px;
 }
 
-.tabLabel:hover {
-    position: relative;
-    z-index: 1;
-    background: #00AAFF;
-    color: #fff;
-    box-shadow: 4px 4px 0 #111;
-    transform: translate(-2px, -2px);
+@media (hover: hover) {
+    .tabLabel:hover {
+        position: relative;
+        z-index: 1;
+        background: #00AAFF;
+        color: #fff;
+        box-shadow: 4px 4px 0 #111;
+        transform: translate(-2px, -2px);
+    }
 }
 
 .tabLabel:active {
@@ -71,7 +73,6 @@
     transition: background 0.1s, color 0.1s, box-shadow 0.1s, transform 0.1s;
 }
 
-#nescss .tabPanel a:hover,
 #nescss .tabPanel a:focus-visible {
     position: relative;
     z-index: 1;
@@ -82,6 +83,51 @@
     text-decoration: none;
     box-shadow: 4px 4px 0 #111;
     transform: translate(-2px, -2px);
+}
+
+@media (hover: hover) {
+    #nescss .tabPanel a:hover {
+        position: relative;
+        z-index: 1;
+        padding: 2px 4px;
+        margin: -2px -4px;
+        color: #fff;
+        background: #00AAFF;
+        text-decoration: none;
+        box-shadow: 4px 4px 0 #111;
+        transform: translate(-2px, -2px);
+    }
+}
+
+/* Écrans tactiles : zones de tap d'au moins ~44px, texte qui ne déborde pas. */
+.tabPanel {
+    overflow-wrap: anywhere;
+}
+
+@media (pointer: coarse) {
+    #nescss .tabPanel li a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    #nescss .tabPanel p a {
+        padding: .35rem 0;
+    }
+}
+
+/* Onglets compacts sur mobile : 3 onglets sur une seule ligne. */
+@media (max-width: 700px) {
+    .tabLabel {
+        flex: 1 1 auto;
+        padding: 14px 6px;
+        font-size: .6rem;
+        text-align: center;
+    }
+
+    .tabLabel:not(:last-of-type) {
+        margin-right: 4px;
+    }
 }
 
 /* Galerie du deck : une colonne lisible, même sur les petits écrans. */
@@ -114,11 +160,18 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.deck-gallery .deck-image-link:hover,
 .deck-gallery .deck-image-link:focus-visible {
     background: transparent;
     box-shadow: none;
     transform: translateY(-4px);
+}
+
+@media (hover: hover) {
+    .deck-gallery .deck-image-link:hover {
+        background: transparent;
+        box-shadow: none;
+        transform: translateY(-4px);
+    }
 }
 
 .deck-gallery img {

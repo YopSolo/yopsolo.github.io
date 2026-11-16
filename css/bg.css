@@ -98,3 +98,13 @@ body {
   transform: rotate(0);
   transform: scale(.66);
 }
+
+/* Pas d'animation de fond : accessibilité (reduced motion) et économie de batterie sur mobile. */
+@media (prefers-reduced-motion: reduce), (max-width: 700px) {
+  body {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    animation: none;
+  }
+}

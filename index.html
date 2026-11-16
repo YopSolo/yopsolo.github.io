@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link href="css/bg.css" rel="stylesheet" />
     <link href="css/tabs.css" rel="stylesheet" />
@@ -24,10 +27,39 @@
             margin: auto;
         }
 
+        .badges {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: flex;
+            align-items: normal;
+        }
+
         @media (max-width: 700px) {
             body {
                 width: auto;
                 margin: 0 .5rem;
+                font-size: .75rem;
+                line-height: 1.6;
+            }
+
+            /* badges: dans le flux, centrés au-dessus du titre */
+            .badges {
+                position: static;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: .75rem;
+                padding-top: .75rem;
+            }
+
+            .badges .badge-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .nes-myOctocat {
+                margin: 0 1rem 0 .25rem;
             }
 
             .nes-container {
@@ -54,12 +86,12 @@
 <body>
 
     <!-- badges -->
-    <div style="position: absolute; top: 10px; right: 20px; display: flex; align-items:normal;">
+    <div class="badges">
         <a href="https://www.linkedin.com/in/christophe-bessis/">
             <li-icon type="app-linkedin-bug-color-icon" class="ivm-view-attr__icon  " size="large" role="img"
                 aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="64x64"
-                    fill="currentColor" class="mercado-match" width="64" height="64" focusable="false">
+                    fill="currentColor" class="mercado-match badge-icon" width="64" height="64" focusable="false">
                     <path
                         d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
                     </path>
@@ -67,7 +99,7 @@
             </li-icon>
         </a>
         <a href="https://www.credential.net/35cee82c-8d74-4faa-a3fe-ef5ba38bff4e#acc.cEnKSo0N"><img
-                src="img/f76d21b5-ec92-4824-b500-c771f51668ae.png" width="80px" height="80px"
+                src="img/unreal-instructor-160.png" width="80" height="80" class="badge-icon"
                 alt="Unreal Authorized Instructor"></a>
         <a href="https://github.com/YopSolo?tab=repositories&q=&type=public&language=&sort=" target="_self"
             class="nes-myOctocat"></a>
@@ -144,13 +176,13 @@
                     </p>
                     <div class="deck-gallery">
                         <button class="deck-image-link" type="button" data-lightbox-image="img/deck-colors.jpg">
-                            <img src="img/deck-colors.jpg" alt="D&amp;D 5.24 deck, one color for each magic school" title="D&amp;D 5.24 deck, one color for each magic school" />
+                            <img width="1020" height="768" loading="lazy" decoding="async" src="img/deck-colors.jpg" alt="D&amp;D 5.24 deck, one color for each magic school" title="D&amp;D 5.24 deck, one color for each magic school" />
                         </button>
                         <button class="deck-image-link" type="button" data-lightbox-image="img/deck-compare.jpg">
-                            <img src="img/deck-compare.jpg" alt="A side-by-side comparison of official cards and my own cards" title="A side-by-side comparison of official cards and my own cards" />
+                            <img width="1020" height="768" loading="lazy" decoding="async" src="img/deck-compare.jpg" alt="A side-by-side comparison of official cards and my own cards" title="A side-by-side comparison of official cards and my own cards" />
                         </button>
                         <button class="deck-image-link" type="button" data-lightbox-image="img/deck-full.jpg">
-                            <img src="img/deck-full.jpg" alt="The complete D&amp;D 5.24 card deck in French" title="The complete D&amp;D 5.24 card deck in French" />
+                            <img width="1020" height="768" loading="lazy" decoding="async" src="img/deck-full.jpg" alt="The complete D&amp;D 5.24 card deck in French" title="The complete D&amp;D 5.24 card deck in French" />
                         </button>
                     </div>
                     <p class="deck-description">
