@@ -110,6 +110,8 @@
     border: 0;
     background: transparent;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .deck-gallery .deck-image-link:hover,
@@ -155,14 +157,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     padding: 4rem 2rem 2rem;
     background: rgba(0, 0, 0, .88);
+    overflow: hidden;
 }
 
 .deck-lightbox-image {
     display: block;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    object-fit: contain;
     width: auto;
     height: auto;
     border: 8px solid #fff;
