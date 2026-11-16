@@ -83,3 +83,112 @@
     box-shadow: 4px 4px 0 #111;
     transform: translate(-2px, -2px);
 }
+
+/* Galerie du deck : une colonne lisible, même sur les petits écrans. */
+.deck-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.deck-description {
+    text-align: center;
+    line-height: 1.8;
+    margin: 1rem auto 0;
+}
+
+.deck-gallery .deck-image-link {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.deck-gallery .deck-image-link:hover,
+.deck-gallery .deck-image-link:focus-visible {
+    background: transparent;
+    box-shadow: none;
+    transform: translateY(-4px);
+}
+
+.deck-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 8px solid #fff;
+    box-shadow: 6px 6px 0 rgba(17, 17, 17, .85);
+}
+
+@media (max-width: 700px) {
+    .deck-gallery {
+        gap: 1rem;
+    }
+
+    .deck-gallery .deck-image-link {
+        flex-basis: calc(50% - .75rem);
+    }
+
+    .deck-gallery img {
+        border-width: 5px;
+        box-shadow: 4px 4px 0 rgba(17, 17, 17, .85);
+    }
+}
+
+.deck-lightbox[hidden] {
+    display: none;
+}
+
+.deck-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem 2rem;
+    background: rgba(0, 0, 0, .88);
+}
+
+.deck-lightbox-image {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border: 8px solid #fff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, .7);
+}
+
+.deck-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: .75rem 1rem;
+    border: 4px solid #fff;
+    background: #00AAFF;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.deck-lightbox-close:hover,
+.deck-lightbox-close:focus-visible {
+    background: #0077B6;
+    box-shadow: 4px 4px 0 #111;
+}
+
+@media (max-width: 700px) {
+    .deck-lightbox {
+        padding: 4rem 1rem 1rem;
+    }
+
+    .deck-lightbox-image {
+        border-width: 5px;
+    }
+}

@@ -118,17 +118,46 @@
             </div>
 
             <!-- TAB 3 -->
-            <!-- <input class="tabInput" name="tabs" type="radio" id="tab-3" onclick="window.location='lisaa.html'" />
-            <label class=tabLabel for="tab-3">Lisaa</label> -->
+            <input class="tabInput" name="tabs" type="radio" id="tab-3" />
+            <label class="tabLabel" for="tab-3">Other</label>
+            <div class="tabPanel" style="width: 100%;">
+                <div class="nes-container with-title">
+                    <p class="title">Other</p>
+                    <p class="deck-description">
+                        I created this deck as a personal side project. It contains around 400 D&amp;D 5.24 cards in French,
+                        including each card's name and other relevant details.
+                    </p>
+                    <div class="deck-gallery">
+                        <button class="deck-image-link" type="button" data-lightbox-image="img/deck-colors.jpg">
+                            <img src="img/deck-colors.jpg" alt="D&amp;D 5.24 deck, one color for each magic school" title="D&amp;D 5.24 deck, one color for each magic school" />
+                        </button>
+                        <button class="deck-image-link" type="button" data-lightbox-image="img/deck-compare.jpg">
+                            <img src="img/deck-compare.jpg" alt="A side-by-side comparison of official cards and my own cards" title="A side-by-side comparison of official cards and my own cards" />
+                        </button>
+                        <button class="deck-image-link" type="button" data-lightbox-image="img/deck-full.jpg">
+                            <img src="img/deck-full.jpg" alt="The complete D&amp;D 5.24 card deck in French" title="The complete D&amp;D 5.24 card deck in French" />
+                        </button>
+                    </div>
+                    <p class="deck-description">
+                        Many thanks to my friend <a href="https://nauwelaers.fr/" target="_blank" rel="noopener noreferrer">Aurelien Nauwelaers</a> for the card designs and artwork.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+    </div>
+
+    <div class="deck-lightbox" id="deck-lightbox" role="dialog" aria-modal="true" aria-label="Full-size deck image" hidden>
+        <button class="deck-lightbox-close" type="button" aria-label="Close image">X</button>
+        <img class="deck-lightbox-image" id="deck-lightbox-image" src="" alt="" />
     </div>
 </body>
 <script>
     const pageAlias = {
         'about': '1',
         'prototypes': '2',
-        'lisaa': '3'
+        'lisaa': '3',
+        'other': '3'
     };
     const legacyPageAlias = {
         'tab_recents': '1',
@@ -138,7 +167,7 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
-    // higlight current tab
+    // highlight current tab
     if (urlParams.has('page')) {
         let page = urlParams.get('page').toLowerCase();
         if (page !== 'gd1') {
@@ -156,6 +185,37 @@
             window.history.pushState({}, '', window.location.pathname + '?page=' + pageKey);
         });
     }
+
+    // Full-size deck image overlay
+    const lightbox = document.getElementById('deck-lightbox');
+    const lightboxImage = document.getElementById('deck-lightbox-image');
+    const lightboxClose = lightbox.querySelector('.deck-lightbox-close');
+    const deckImages = document.querySelectorAll('[data-lightbox-image]');
+
+    function closeLightbox() {
+        lightbox.hidden = true;
+        lightboxImage.src = '';
+        document.body.style.overflow = '';
+    }
+
+    deckImages.forEach(function (thumbnail) {
+        thumbnail.addEventListener('click', function () {
+            const image = thumbnail.querySelector('img');
+            lightboxImage.src = thumbnail.dataset.lightboxImage;
+            lightboxImage.alt = image.alt;
+            lightbox.hidden = false;
+            document.body.style.overflow = 'hidden';
+            lightboxClose.focus();
+        });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (event) {
+        if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
 </script>
 
 </html>
